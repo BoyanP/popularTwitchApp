@@ -1,0 +1,72 @@
+<html ng-app ="popularTwitch">
+
+  <head>
+
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Nova+Square|Righteous|Rubik+Mono+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href= "grid.css">
+  
+  <script src="jquery-1.11.3.js"></script>
+  <script src= "popularTwitchV2.0.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+  
+  
+
+  </head>
+  <body class="container" ng-controller = "twitchController">
+    <div class="container">
+      <div class= "page-header">
+        <h1> Trending on Twitch.tv</h1><br>
+        <small>Browse the most popular games and their most popular streamers</small>
+      </div>
+    </div>
+    <div ng-repeat="game in games track by $index">
+    <div class ="row" >
+    <div  class="col-xs-4">
+      <div class = "thumbnail">
+      <img class ="gamePic" ng-src = "{{game.game.box.medium}}"/>
+      <div class = "caption">
+      <div class= "gameTitle">{{game.game.name}}</div>
+      total viewers : {{game.viewers}}
+      </div>
+      </div>
+      
+      
+      
+    </div>
+    <div class = "col-xs-8" ng-repeat="streamer in streamers |limitTo: 10">
+
+      <table class="table container" ng-show="streamer.game == game.game.name ">
+        <thead></thead>
+        <tbody ng-repeat="streams in streamer.streams">
+        <tr>
+      <td class= "streamerName"><a href =" {{streams.channel.url}}">{{streams.channel.display_name}}</a></td>
+      <td><img ng-src = "{{streams.channel.logo}}" class = "streamerLogo img-rounded"></td>
+      <td> viewers: {{streams.viewers}}</td>
+
+        </tr>
+        
+        </tbody>
+      </table>
+    </div>
+    
+    </div>
+    </div>
+
+
+  <!--
+  <div class="col-sm-4" ng-repeat="game in games" >
+
+    <div class="col-sm-8" ng-repeat="streamer in game.streamers">
+      {{game.game.name}}
+      {{streamer.channel.display_name}}
+      
+    </div>
+  </div>
+  -->
+  </body>
+
+
+
+
+</html>

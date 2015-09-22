@@ -1,0 +1,108 @@
+.page-header{
+
+  text-align:center;
+  color:white;
+  font-family: 'Nova Square', cursive;
+
+}
+
+body{
+  
+  
+  background:linear-gradient(150deg,purple,#68EDDB);
+  
+}
+
+.thumbnail{
+
+  background-color:rgba(50,194,150,0.4);
+  color:white;
+  font-family: 'Righteous', cursive;
+
+}
+
+.gamePic{
+  
+  padding-left:10px;
+  
+}
+
+.caption{
+  
+  padding-left:10px;
+  font-size:18px;
+  
+}
+
+img{
+  
+  padding-top:10px;
+  border-radius:20px;
+  
+}
+
+.gameTitle{
+  
+  font-size:27px;
+  
+  
+}
+
+.streamerName{
+  
+  font-size:20px;
+  font-family: 'Rubik Mono One', sans-serif;
+  color:white;
+  
+}
+
+.streamerLogo{
+  
+  
+  height:20%;
+  width:20%;
+  border-radius:25px;
+  
+}
+table
+
+tbody{
+  
+  padding:10px;
+  
+}
+
+td{
+  
+  font-family: 'Righteous', cursive;
+  color:white;
+  
+}
+
+
+a:link{
+  
+  
+  color:#FFFFFF;
+  
+}
+
+a:visited{
+  
+  color:lightgreen;
+  
+}
+
+a:hover{
+  
+  color:#A426ED;
+  
+}
+
+.col-sm-4{
+  
+  padding-right:50px;
+  
+    
+  
+}
