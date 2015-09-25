@@ -24,6 +24,8 @@ $(document).ready(function(){
      var gameQuery;
      $scope.games.forEach(function(twitchGame,index){
        gameQuery = twitchGame.game.name.replace(/\s/g,"+");
+			 gameQuery = gameQuery.replace("&","%26");// twitch api doesn't like having & in there. 
+																								// it doesn't complain about : though
        
        //console.log($scope.count);
        $http.get("https://api.twitch.tv/kraken/streams?game="+gameQuery).success(function(streamers){
